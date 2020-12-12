@@ -2,6 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
+const generateMarkdown = require('./utils/generateMarkdown')
+
+// create a promise to write to file as a response
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user that will be passed to inquirer
 const questions = [
@@ -47,19 +51,24 @@ const questions = [
 },
 {
     type: 'list',
-    message: 'Choose a liscense for your application:',
-    choices: [],
-    name: 'liscense'
+    message: 'Choose a license for your application:',
+    choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+    name: 'license'
 }
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+// pass the questions into inquirer
+const userResponse = () => inquirer.prompt(questions);
+
+// create variable with the name of the file that will be written
+const writtenFile = 'exampleREADME.md';
 
 // function to initialize program
 function init() {
-
+    userResponse()
+    .then((answers) => writeFileAsync(writtenFile, generateMarkdown(answers)))
+    .then(() => console.log("Succesfully written to " + writtenFile))
+    .catch((err) => console.error(err));
 }
 
 // function call to initialize program
