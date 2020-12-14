@@ -45,7 +45,7 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${data.license}
+  This application is covered under the following license ${data.license}
 
 `;
 }
