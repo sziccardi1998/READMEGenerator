@@ -7,7 +7,11 @@ The README Generator is a command line application that takes user input to crea
 
 ## Table of Contents
 
-*s
+  - [Technologies Used](#technologies-used)
+  - [Installation](#installation)
+  - [Questions](#questions)
+  - [Links](#links)
+  - [License](#license)
 
 
 ## Technologies Used
@@ -17,7 +21,7 @@ The README Generator is a command line application that takes user input to crea
 * util.js
 
 
-## Intallation
+## Installation
 
 Node.js will need to be installed to use this application. After downloading the application, use the command npm init and npm install to download all of the application dependencies.
 
@@ -30,3 +34,8 @@ If you have any questions regarding this application, I can be reached through m
 ## Links
 
 A demo of the application in use can be found at 
+
+
+## License
+
+This application is covered under the following license [MIT](./LICENSE).
