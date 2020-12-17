@@ -1,7 +1,7 @@
 {
   "name": "readmegenerator",
   "version": "1.0.0",
-  "description": "",
+  "description": "The README Generator is a command line application that takes user input to create a formated README.md file.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,7 @@
     "fs": "0.0.1-security",
     "inquirer": "^7.3.3",
     "util": "^0.12.3"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }

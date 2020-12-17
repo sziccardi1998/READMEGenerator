@@ -46,7 +46,7 @@ const questions = [
 },
 {
     type: 'input',
-    message: 'Enter your applications contribution guidlines:',
+    message: 'Enter your applications contribution guidelines:',
     name: 'contribution',
 },
 {
